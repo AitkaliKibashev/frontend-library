@@ -30,7 +30,7 @@ function Test() {
     getPossibleGateways,
     submitCart,
     setPaymentMethod,
-    setRecapcha,
+    setRecaptcha,
     applyCoupon,
   } = useCart('yetrajerde@gufum.com')
   const { executeRecaptcha } = useReCaptcha()
@@ -52,7 +52,7 @@ function Test() {
         await applyCoupon('belkosko788')
         const recaptcha = await executeRecaptcha()
         if (recaptcha === null) return
-        setRecapcha(recaptcha)
+        setRecaptcha(recaptcha)
         await submitCart()
       } catch (error) {
         console.error(error)

@@ -244,7 +244,7 @@ export const useCart = (customerEmail: string) => {
       getPossibleGateways() {
         return getCommonGateways(ctx.get(cartAtom).parts, ctx.get(productsAtom))
       },
-      setRecapcha(recaptcha: string) {
+      setRecaptcha(recaptcha: string) {
         cartAtom(ctx, (cart) => ({ ...cart, recaptcha }))
       },
       updateQuantityOfProduct(cartItem: PartOrder) {
